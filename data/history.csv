@@ -1,33 +1,6 @@
-import csv
-import os
-from datetime import datetime
-
-HISTORY_FILE = "data/history.csv"
-
-
-def save_translation(source, target, original, translated):
-
-    os.makedirs("data", exist_ok=True)
-
-    file_exists = os.path.isfile(HISTORY_FILE)
-
-    with open(HISTORY_FILE, "a", newline="", encoding="utf-8") as file:
-
-        writer = csv.writer(file)
-
-        if not file_exists:
-            writer.writerow([
-                "Timestamp",
-                "Source Language",
-                "Target Language",
-                "Original Text",
-                "Translated Text"
-            ])
-
-        writer.writerow([
-            datetime.now(),
-            source,
-            target,
-            original,
-            translated
-        ])
+        ])2026-06-27 00:51:50.331642,fra_Latn,fra_Latn,commex alles vous,comme tout vous
+52:02.9,eng_Latn,fra_Latn,how are you,Comment allez-vous ?
+52:09.2,eng_Latn,fra_Latn,what are you doing today,Que faites-vous aujourd'hui ?
+52:14.4,eng_Latn,fra_Latn,have you seen the sunrise,Avez-vous vu le lever du soleil ?
+2026-06-27 00:56:40.112754,eng_Latn,hin_Deva,how are you,आप कैसे हैं
+2026-06-27 00:56:46.992094,eng_Latn,hin_Deva,what are you doing,तुम क्या कर रहे हो
